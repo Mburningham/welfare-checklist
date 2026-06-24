@@ -538,7 +538,7 @@ async function handleSubmit() {
     supervisorSignature:S.supervisorSig,supervisorSignatureDate:S.supervisorSigDate,
     itemPhotos:S.itemPhotos,sectionPhotos:S.sectionPhotos,
     submittedAt:new Date().toISOString(),totalPhotos:totalPhotos()};
-  try{await fetch(POWER_AUTOMATE_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});}
+  try{await fetch(POWER_AUTOMATE_URL,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Token dc893e84-c126-4610-9e6a-8e180c57db62'},body:JSON.stringify(payload)});}
   catch(e){console.warn('CORS/network (data still sent):', e);}
   // Show success
   document.getElementById('main-container').style.display='none';
